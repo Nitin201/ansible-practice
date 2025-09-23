@@ -7,7 +7,7 @@
     - name: create empty file
       file:
         path: /home/ubuntu/newfile.txt
-        state: touch
+        state: absent
 
     - name: create directoryy
       file: 
