@@ -1,0 +1,15 @@
+---
+- name: file modification
+  hosts: all
+  become: true   # run with sudo
+
+  tasks:
+    - name: create empty file
+      file:
+        path: /home/ubuntu/newfile.txt
+        state: absent
+
+    - name: create directoryy
+      file: 
+        path: /home/ubuntu/myfolder
+        state: directory

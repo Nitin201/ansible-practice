@@ -1,0 +1,12 @@
+---
+- name: copying file to remote
+  hosts: all
+ 
+  tasks: 
+   - name: copy files
+     copy:
+       src: /etc/ansible/playbook/hello.txt
+       dest: /home/ubuntu
+       owner: ubuntu
+       mode: 0777
+       backup: true

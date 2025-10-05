@@ -1,0 +1,6 @@
+--- 
+- name: first pb
+  hosts: localhost
+  tasks:
+    - name: first my pb
+      ping:
