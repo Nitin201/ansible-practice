@@ -1,0 +1,13 @@
+---
+- name: user managment
+  hosts: all
+  become: true
+
+  tasks:
+   - name: user creation
+     user: 
+      name: nitin
+      comment: new user adding for QA team
+      shell: /bin/bash
+      groups: QA,nitin
+      
