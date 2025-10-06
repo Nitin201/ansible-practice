@@ -1,0 +1,17 @@
+---
+- name: corn job
+  hosts: all
+  become: true
+ 
+  tasks:
+   - name: add cron job
+     cron:
+      name: run test script
+      minute: 1
+      hour: 11
+      day: 6
+      month: "*"
+      weekday: "*"
+      user: ubuntu
+      job: /home/ubuntu/test.sh
+
