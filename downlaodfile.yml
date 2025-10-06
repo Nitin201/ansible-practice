@@ -1,0 +1,14 @@
+---
+- name: download files
+  hosts: all
+  become: true
+
+
+  tasks:
+   - name: download file
+     get_url: 
+       url: https://www.python.org/downloads/source/
+       dest: /home/ubuntu/
+       owner: ubuntu
+       mode: 0777
+ 
